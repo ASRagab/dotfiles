@@ -37,6 +37,7 @@ cask 'visual-studio-code'
 cask 'zoom'
 cask 'iterm2'
 cask 'miniconda'
+cask 'jetbrains-toolbox'
 
 # Fonts
 cask 'font-hack-nerd-font'
