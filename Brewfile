@@ -20,6 +20,7 @@ brew 'trash' # Manage the Trash bin
 brew 'tree' # List directories in a tree structure
 brew 'git-delta'
 brew 'vim'
+brew 'coursier'
 
 # Apps
 cask 'discord'
