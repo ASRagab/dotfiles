@@ -1,9 +1,11 @@
 # If you come from bash you might have to change your $PATH.
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 
+export DOTFILES=$HOME/.dotfiles
+
 # Path to your oh-my-zsh installation.
 # export ZSH="/Users/<myLoginId>/.oh-my-zsh"
-export ZSH="$HOME/.oh-my-zsh"
+export ZSH="$DOTFILES"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -71,7 +73,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
 	git
-    z
+  z
 	brew
 	osx
 	kubectl
@@ -110,11 +112,11 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-source ~/.aliases.zsh
+source $HOME/.aliases.zsh
 
 # Add my scripts, overwrites
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ -f ~/.p10k.zsh ]] && source ~/.p10k.zsh
+[[ -f $HOME/.p10k.zsh ]] && source $HOME/.p10k.zsh
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 # keep new line here
