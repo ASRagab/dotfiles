@@ -3,10 +3,11 @@
 echo "Setting up your Mac..."
 
 # Setting up basic gitconfig
-  git config --global user.email "Averroes2006@gmail.com"
-  git config --global user.name "Ahmad Ragab"
+git config --global user.email "Averroes2006@gmail.com"
+git config --global user.name "Ahmad Ragab"
 
 export DOTFILES=$HOME/.dotfiles
+
 # Check for Oh My Zsh and install if we don't have it
 export ZSH=$HOME/.oh-my-zsh
 if test ! -d $ZSH; then
@@ -51,12 +52,15 @@ ln -s $DOTFILES/.p10k.zsh $HOME/.p10k.zsh
 rm -rf $HOME/.vimrc
 ln -s $DOTFILES/.vimrc $HOME/.vimrc
 
-# # Update Homebrew recipes
-# brew update
+# Update Homebrew recipes
+brew update
 
-# # Install all our dependencies with bundle (See Brewfile)
-# brew tap homebrew/bundle
-# brew bundle
+# Install all our dependencies with bundle (See Brewfile)
+brew tap homebrew/bundle
+brew bundle
+
+# brew configuration
+conda init "$(basename "${SHELL}")"
 
 # clone git repos
 $DOTFILES/clone.sh

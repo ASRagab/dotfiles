@@ -36,6 +36,7 @@ cask 'the-unarchiver'
 cask 'visual-studio-code'
 cask 'zoom'
 cask 'iterm2'
+cask 'miniconda'
 
 # Fonts
 cask 'font-hack-nerd-font'
