@@ -47,6 +47,10 @@ ln -s $DOTFILES/.mackup.cfg $HOME/.mackup.cfg
 rm -rf $HOME/.p10k.zsh
 ln -s $DOTFILES/.p10k.zsh $HOME/.p10k.zsh
 
+# Symlink the .vimrc 
+rm -rf $HOME/.vimrc
+ln -s $DOTFILES/.vimrc $HOME/.vimrc
+
 # # Update Homebrew recipes
 # brew update
 
