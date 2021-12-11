@@ -18,9 +18,9 @@ while true; do sudo -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 ###############################################################################
 
 # Set computer name (as done via System Preferences → Sharing)
-sudo scutil --set ComputerName "MBP M1 Ahmad"
-sudo scutil --set HostName "MBP M1 Ahmad"
-sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string "MBP M1 Ahmad"
+sudo scutil --set ComputerName "RagabMBP"
+sudo scutil --set HostName "RagabMBP"
+sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string "RagabMBP"
 
 # Disable the sound effects on boot
 # sudo nvram SystemAudioVolume=" "
@@ -186,7 +186,7 @@ sudo pmset -a autorestart 1
 sudo systemsetup -setrestartfreeze on
 
 # Sleep the display after 15 minutes
-sudo pmset -a displaysleep 10
+# sudo pmset -a displaysleep 10
 
 # Disable machine sleep while charging
 # sudo pmset -c sleep 0
@@ -198,7 +198,7 @@ sudo pmset -b sleep 15
 sudo pmset -a standbydelay 7200
 
 # Never go into computer sleep mode
-# sudo systemsetup -setcomputersleep Off > /dev/null
+sudo systemsetup -setcomputersleep Off > /dev/null
 
 # Hibernation mode
 # 0: Disable hibernation (speeds up entering sleep mode)

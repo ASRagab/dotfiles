@@ -48,6 +48,10 @@ ln -s $DOTFILES/.mackup.cfg $HOME/.mackup.cfg
 rm -rf $HOME/.p10k.zsh
 ln -s $DOTFILES/.p10k.zsh $HOME/.p10k.zsh
 
+# Instll Vim Plug
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+
 # Symlink the .vimrc 
 rm -rf $HOME/.vimrc
 ln -s $DOTFILES/.vimrc $HOME/.vimrc
@@ -59,8 +63,8 @@ brew update
 brew tap homebrew/bundle
 brew bundle
 
-# brew configuration
-conda init "$(basename "${SHELL}")"
+# install pipenv
+python3 -m pip install --user pipenv
 
 # clone git repos
 $DOTFILES/clone.sh

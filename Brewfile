@@ -36,7 +36,6 @@ cask 'the-unarchiver'
 cask 'visual-studio-code'
 cask 'zoom'
 cask 'iterm2'
-cask 'miniconda'
 cask 'jetbrains-toolbox'
 
 # Fonts
@@ -49,6 +48,3 @@ cask 'font-roboto-mono-nerd-font'
 cask 'font-jetbrains-mono-nerd-font'
 cask 'font-sauce-code-pro-nerd-font'
 cask 'font-code-new-roman-nerd-font'
-
-# Mac App Store
-mas 'Giphy Capture', id: 668208984
