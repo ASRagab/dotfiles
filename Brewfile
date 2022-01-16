@@ -19,8 +19,18 @@ brew 'pkg-config' # https://github.com/driesvints/dotfiles/issues/20
 brew 'trash' # Manage the Trash bin
 brew 'tree' # List directories in a tree structure
 brew 'git-delta'
+brew 'nvm'
 brew 'vim'
 brew 'coursier'
+brew 'tfenv'
+brew 'openssl' 
+brew 'readline' 
+brew 'sqlite3' 
+brew 'xz' 
+brew 'zlib'
+brew 'tldr'
+brew 'pyenv'
+brew 'direnv'
 
 # Apps
 cask 'discord'

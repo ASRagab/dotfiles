@@ -1,6 +1,4 @@
 # If you come from bash you might have to change your $PATH.
-export PATH=$HOME/bin:/usr/local/bin:$PATH
-
 export DOTFILES=$HOME/.dotfiles
 
 # Path to your oh-my-zsh installation.
@@ -93,6 +91,7 @@ source $ZSH/oh-my-zsh.sh
 # You may need to manually set your language environment
 export LANG=en_US.UTF-8
 
+export PATH="/opt/homebrew/opt/libpq/bin:$PATH"
 # Preferred editor for local and remote sessions
 # if [[ -n $SSH_CONNECTION ]]; then
 #   export EDITOR='vim'
@@ -119,18 +118,17 @@ source $HOME/.aliases
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/Users/ahmadragab/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/Users/ahmadragab/anaconda3/etc/profile.d/conda.sh" ]; then
-        . "/Users/ahmadragab/anaconda3/etc/profile.d/conda.sh"
-    else
-        export PATH="/Users/ahmadragab/anaconda3/bin:$PATH"
-    fi
-fi
-unset __conda_setup
-# <<< conda initialize <<<
+export NVM_DIR="$HOME/.nvm"
+[ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
+[ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
+eval "$(pyenv init -)"
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/ahmadragab/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/ahmadragab/Downloads/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/ahmadragab/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/ahmadragab/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
+
+# direnv shell hook
+eval "$(direnv hook zsh)"
 
