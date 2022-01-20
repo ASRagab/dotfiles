@@ -74,5 +74,7 @@ python3 -m pip install --user pipenv
 # clone git repos
 $DOTFILES/clone.sh
 
+touch $HOME/.hushlogin
+
 # Set macOS preferences - we will run this last because this will reload the shell
 source $DOTFILES/.macos
