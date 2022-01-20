@@ -9,9 +9,9 @@ git config --global user.name "Ahmad Ragab"
 export DOTFILES=$HOME/.dotfiles
 
 # Check for Oh My Zsh and install if we don't have it
-export ZSH=$HOME/.oh-my-zsh
 if test ! -d $ZSH; then
   echo "Installing Oh My Zsh..."
+  export ZSH=$HOME/.oh-my-zsh
   0>dev/null /bin/sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 fi
 
