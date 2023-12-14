@@ -28,3 +28,8 @@ alias resolve="git add . && git commit --no-edit"
 alias gsh="git stash -u"
 alias gun="git restore --staged ."
 alias wip="commit wip"
+
+# setJDK
+alias setJDK11='unset JAVA_HOME;export JAVA_HOME=`/usr/libexec/java_home -v 11`'
+alias setJDK17='unset JAVA_HOME;export JAVA_HOME=`/usr/libexec/java_home -v 17`'
+
