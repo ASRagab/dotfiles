@@ -123,5 +123,14 @@ source $HOME/.aliases
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
+# homebrew
+export HOMEBREW_NO_AUTO_UPDATE=1
+export PATH=/usr/local/bin:$PATH
+
+# poetry
+export PATH="$PATH:$HOME/.local/bin"
+
+
+
 # direnv shell hook
 eval "$(direnv hook zsh)"
