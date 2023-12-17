@@ -29,8 +29,6 @@ if [ -z "$git_user" ]; then
   git config --global user.name "Ahmad Ragab"
 fi
 
-"$DOTFILES"/ssh.sh 
-
 if [ -z "$git_email" ]; then
   git config --global user.email "averroes2006@gmail.com"
 fi
