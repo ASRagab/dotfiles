@@ -1,5 +1,7 @@
 #!/bin/sh
 
+set -euxo pipefail
+
 echo "Generating a new SSH key for GitHub..."
 
 # Generating a new SSH key
