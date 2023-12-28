@@ -12,6 +12,9 @@ echo "Setting up your Mac..."
 # Install Homebrew if it's not already installed
 if ! command_exists brew; then
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+  (echo; echo 'eval "$(/opt/homebrew/bin/brew shellenv)"') >> $HOME/.zprofile
+  eval "$(/opt/homebrew/bin/brew shellenv)"
 fi
 
 if [ ! -d "$HOME/.oh-my-zsh" ]; then
